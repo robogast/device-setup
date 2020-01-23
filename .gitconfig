@@ -1,0 +1,20 @@
+[push]
+	default = current
+[alias]
+	s = status
+	d = diff
+	cam = commit -am
+	new = checkout -b
+	smite = branch -D
+	cm = commit -m
+	c = commit
+	ps = push
+	co = checkout
+	pl = pull
+	b = branch
+	plrb = pull --rebase
+	adog = log --all --decorate --oneline --graph
+	ap = add --patch
+	clog = log --oneline
+[credential]
+	helper = store
