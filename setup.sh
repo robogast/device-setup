@@ -9,8 +9,8 @@ read -p 'GitHub username: ' username
 printf -v userheaderstring "[user]"
 printf -v useremailstring "\temail = %s" "$useremail"
 printf -v usernamestring "\tname = %s" "$username"
-printf "%s\n%s\n%s\n" "$userheaderstring" "$useremailstring" "$usernamestring" >> DIR/.gitignore
+printf "%s\n%s\n%s\n" "$userheaderstring" "$useremailstring" "$usernamestring" >> $DIR/.gitconfig
 
-cp DIR/.gitignore ~/
+cp $DIR/.gitconfig ~/
 
-git update-index --skip-worktree DIR/.gitignore
+git update-index --skip-worktree $DIR/.gitconfig
