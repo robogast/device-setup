@@ -16,5 +16,3 @@
 	adog = log --all --decorate --oneline --graph
 	ap = add --patch
 	clog = log --oneline
-[credential]
-	helper = store
