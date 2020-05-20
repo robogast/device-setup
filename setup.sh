@@ -14,3 +14,7 @@ printf "%s\n%s\n%s\n" "$userheaderstring" "$useremailstring" "$usernamestring" >
 cp $DIR/.gitconfig ~/
 
 git update-index --skip-worktree $DIR/.gitconfig
+
+./install-vscode.sh
+
+./cuda-cudnn/cuda-cudnn-setup.sh
