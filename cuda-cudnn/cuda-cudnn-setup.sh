@@ -10,8 +10,10 @@ sudo apt-key add /var/cuda-repo-10-2-local-10.2.89-440.33.01/7fa2af80.pub
 sudo apt update
 sudo apt install -y cuda
 
-export PATH=/usr/local/cuda-10.2/bin:/usr/local/cuda-10.2/NsightCompute-2019.1${PATH:+:${PATH}}
-export LD_LIBRARY_PATH=/usr/local/cuda-10.2/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+printf "\n\n%s" 'export PATH=/usr/local/cuda-10.2/bin:/usr/local/cuda-10.2/NsightCompute-2019.1${PATH:+:${PATH}}' >> ~/.bashrc
+printf "\n%s\n" 'export LD_LIBRARY_PATH=/usr/local/cuda-10.2/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}' >> ~/.bashrc
+
+source ~/.bashrc
 
 $CUDNN_FILE="libcudnn7_7.6.5.32-1+cuda10.2_amd64.deb"
 if [ ! -f "$CUDNN_FILE" ]; then
